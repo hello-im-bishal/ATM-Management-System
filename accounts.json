@@ -1,0 +1,16 @@
+{
+  "accounts": [
+    {
+      "name": "Rahul",
+      "accountNo": "1001",
+      "pin": "1234",
+      "balance": 5000
+    },
+    {
+      "name": "Anita",
+      "accountNo": "1002",
+      "pin": "4321",
+      "balance": 8000
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ATM Machine</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="outer-box">
+
+<div class="header">BBS INDIA</div>
+<div class="sub-header">ATM MANAGEMENT SYSTEM</div>
+
+<div class="box">
+
+<!-- LOGIN PAGE -->
+<div id="loginPage">
+<h3>Account Login</h3>
+<input type="text" id="name" placeholder="Account Holder Name">
+<input type="text" id="accNo" placeholder="Account Number">
+<button onclick="login()">Login</button>
+<div id="loginMsg" class="error"></div>
+</div>
+
+<!-- FIRST PIN PAGE -->
+<div id="pinPage">
+<h3>Enter ATM PIN</h3>
+<input type="password" id="pin" placeholder="Enter ATM PIN">
+<button onclick="verifyPin()">Submit</button>
+<div id="pinMsg" class="error"></div>
+</div>
+
+<!-- OPERATION PAGE -->
+<div id="operationPage">
+<h3>Choose Operation</h3>
+
+<button onclick="selectOperation('withdraw')">Withdraw</button>
+<button onclick="selectOperation('deposit')">Add Money</button>
+<button onclick="selectOperation('balance')">Check Balance</button>
+
+<div id="amountBox">
+<input type="number" id="amount" placeholder="Enter Amount">
+<button onclick="askRePin()">Proceed</button>
+</div>
+</div>
+
+<!-- RE-ENTER PIN PAGE -->
+<div id="rePinPage">
+<h3>Re-enter ATM PIN</h3>
+<input type="password" id="rePin" placeholder="Enter ATM PIN Again">
+<button onclick="confirmTransaction()">Confirm</button>
+<div id="rePinMsg" class="error"></div>
+</div>
+
+<!-- RESULT PAGE -->
+<div id="resultPage">
+<div id="displayResult"></div>
+<p><b>Do you want to do something more?</b></p>
+<button onclick="continueOperation()">Yes</button>
+<button onclick="logout()">Logout</button>
+</div>
+
+</div>
+
+<div class="footer">BBS INDIA</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
